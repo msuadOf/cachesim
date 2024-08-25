@@ -50,8 +50,10 @@ int main(void)
 {
     printf("Hello World!\n");
     init_memory();
-    init_cachesim(mem_read, mem_write, 12, 2);
-
+    //初始化一个2路4k大小的cache
+    // init_cachesim(mem_read, mem_write, 12, 2,4);
+        init_cachesim(mem_read, mem_write, 6, 1,4);
+    display_cache_config();
     for (int i = 0; i < 0x100; i++)
     {
         uint32_t num = i;
